@@ -77,8 +77,10 @@
                     </div>
                     <div class="col-1-of-2">
                         <div class="composition">
+                            <!-- Resolution switching -->
                             <img
-                                src="img/nat-1-large.jpg"
+                                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                                sizes="(max-width: 900px) 17vw, (max-width: 600px) 26vw, 300px"
                                 alt="Photo 1"
                                 class="composition__photo composition__photo--p1"
                             />
@@ -368,7 +370,12 @@
         </main>
         <footer class="footer">
             <div class="footer__logo-box">
-                <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+                <picture class="footer__logo">
+                    <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+                            media="(max-width:37.5rem)">
+                    <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo"
+                        src="img/logo-green-1x.png">
+                </picture>
             </div>
             <div class="row">
                 <div class="col-1-of-2">
@@ -420,9 +427,7 @@
                         blanditiis accusamus ad? Consectetur quam dolor eius odio. Minima, repellendus incidunt a 
                         pariatur aut deserunt fuga neque ab, commodi quidem porro?
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores fuga rem odit excepturi et 
-                        voluptatum repellendus quae tenetur dolores, 
-                        blanditiis accusamus ad? Consectetur quam dolor eius odio. Minima, repellendus incidunt a 
-                        pariatur aut deserunt fuga neque ab, commodi quidem porro?
+                        voluptatum repellendus quae tenetur dolores.
                     </p>
                     <a href="#" class="btn btn--green">Book now</a>
                 </div>
